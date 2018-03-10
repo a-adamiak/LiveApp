@@ -5,3 +5,10 @@
 /AA.Common/bin
 /.vs/LiveApp/v15
 /AA.Common/obj
+/AAS.LiveApp.Domain/bin/Release/netcoreapp2.0
+/AAS.LiveApp.Domain/obj
+/AAS.LiveApp.Infrastructure/bin/Release/netcoreapp2.0
+/AAS.LiveApp.Infrastructure/obj
+/AAS.LiveApp.WebClient/AAS.LiveApp.WebClient/bin/Debug/netcoreapp2.0
+/AAS.LiveApp.WebClient/AAS.LiveApp.WebClient/obj
+/AAS.LiveApp.WebClient/DAL/bin/Debug/netstandard2.0

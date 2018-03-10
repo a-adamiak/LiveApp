@@ -7,13 +7,13 @@ namespace AAS.Common.Models
 	public class DateTimeRange
 	{
 
-		public DateTimeOffset? From { get; private set; }
-		public DateTimeOffset? To { get; private set; }
+		public DateTime? From { get; private set; }
+		public DateTime? To { get; private set; }
 		public DateTimeRangeType RangeType { get; private set; }
 
 		private DateTimeRange() { }
 
-		public static DateTimeRange Range(DateTimeOffset from, DateTimeOffset to)
+		public static DateTimeRange Range(DateTime from, DateTime to)
 		{
 			return new DateTimeRange
 			{
@@ -23,7 +23,7 @@ namespace AAS.Common.Models
 			};
 		}
 
-		public static DateTimeRange DateFrom(DateTimeOffset from)
+		public static DateTimeRange DateFrom(DateTime from)
 		{
 			return new DateTimeRange
 			{
@@ -32,7 +32,7 @@ namespace AAS.Common.Models
 			};
 		}
 
-		public static DateTimeRange DateTo(DateTimeOffset to)
+		public static DateTimeRange DateTo(DateTime to)
 		{
 			return new DateTimeRange
 			{

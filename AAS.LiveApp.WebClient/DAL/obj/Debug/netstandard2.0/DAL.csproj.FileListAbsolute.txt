@@ -1,0 +1,9 @@
+G:\OneDrive\Projects\Projects\GitHub\AAS.LiveApp.WebClient\DAL\bin\Debug\netstandard2.0\DAL.deps.json
+G:\OneDrive\Projects\Projects\GitHub\AAS.LiveApp.WebClient\DAL\bin\Debug\netstandard2.0\DAL.dll
+G:\OneDrive\Projects\Projects\GitHub\AAS.LiveApp.WebClient\DAL\bin\Debug\netstandard2.0\DAL.pdb
+G:\OneDrive\Projects\Projects\GitHub\AAS.LiveApp.WebClient\DAL\obj\Debug\netstandard2.0\DAL.csprojResolveAssemblyReference.cache
+G:\OneDrive\Projects\Projects\GitHub\AAS.LiveApp.WebClient\DAL\obj\Debug\netstandard2.0\DAL.csproj.CoreCompileInputs.cache
+G:\OneDrive\Projects\Projects\GitHub\AAS.LiveApp.WebClient\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfoInputs.cache
+G:\OneDrive\Projects\Projects\GitHub\AAS.LiveApp.WebClient\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
+G:\OneDrive\Projects\Projects\GitHub\AAS.LiveApp.WebClient\DAL\obj\Debug\netstandard2.0\DAL.dll
+G:\OneDrive\Projects\Projects\GitHub\AAS.LiveApp.WebClient\DAL\obj\Debug\netstandard2.0\DAL.pdb

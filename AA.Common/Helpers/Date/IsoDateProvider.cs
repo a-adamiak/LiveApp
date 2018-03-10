@@ -5,7 +5,7 @@ namespace AAS.Common.Helpers.Date
 {
 	public class IsoDateProvider : IDateProvider
 	{
-		public DateTimeOffset FirstDateOfWeek(int year, int weekOfYear)
+		public DateTime FirstDateOfWeek(int year, int weekOfYear)
 		{
 			DayOfWeek firstDayOfWeek = DayOfWeek.Monday;
 			CultureInfo ci = CultureInfo.InvariantCulture;
@@ -17,14 +17,14 @@ namespace AAS.Common.Helpers.Date
 			return firstWeekDay.AddDays(weekOfYear * 7);
 		}
 
-		public (DateTimeOffset from, DateTimeOffset to) GetWeekRange(int year, int weekOfYear)
+		public (DateTime from, DateTime to) GetWeekRange(int year, int weekOfYear)
 		{
-			DateTimeOffset firstDay = FirstDateOfWeek(year, weekOfYear);
-			DateTimeOffset lastDay = firstDay.AddDays(6);
+			DateTime firstDay = FirstDateOfWeek(year, weekOfYear);
+			DateTime lastDay = firstDay.AddDays(6);
 			return (firstDay, lastDay);
 		}
 
-		public (DateTimeOffset from, DateTimeOffset to) GetMonthRange(int year, int month)
+		public (DateTime from, DateTime to) GetMonthRange(int year, int month)
 		{
 			DateTime firstDay = new DateTime(year, month, 1);
 			DateTime lastDay = firstDay.AddMonths(1).AddDays(-1);
@@ -41,21 +41,21 @@ namespace AAS.Common.Helpers.Date
 				DayOfWeek.Monday);
 		}
 
-		public int GetWeekNumber(DateTimeOffset time)
+		public int GetWeekNumber(DateTime time)
 		{
-			DayOfWeek day = CultureInfo.InvariantCulture.Calendar.GetDayOfWeek(time.DateTime);
+			DayOfWeek day = CultureInfo.InvariantCulture.Calendar.GetDayOfWeek(time);
 			if (day >= DayOfWeek.Monday && day <= DayOfWeek.Wednesday) time = time.AddDays(3);
 
 			// Return the week of our adjusted day
-			return CultureInfo.InvariantCulture.Calendar.GetWeekOfYear(time.DateTime, CalendarWeekRule.FirstFourDayWeek,
+			return CultureInfo.InvariantCulture.Calendar.GetWeekOfYear(time, CalendarWeekRule.FirstFourDayWeek,
 				DayOfWeek.Monday);
 		}
 
-		public int GetIsoYearNumber(DateTimeOffset time)
+		public int GetIsoYearNumber(DateTime time)
 		{
 			CultureInfo cul = CultureInfo.CurrentCulture;
 			int weekNum = cul.Calendar.GetWeekOfYear(
-				time.DateTime,
+				time,
 				CalendarWeekRule.FirstFourDayWeek,
 				DayOfWeek.Monday);
 			int year = weekNum >= 52 && time.Month == 1 ? time.Year - 1 : time.Year;

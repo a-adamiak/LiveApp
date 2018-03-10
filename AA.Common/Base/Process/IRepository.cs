@@ -2,10 +2,10 @@
 using AAS.Common.Base.Object;
 using AAS.Common.Practices.Option;
 
-namespace AAS.Common.Base.Storage
+namespace AAS.Common.Base.Process
 {
 	public interface IRepository<TAggregate, in TIdentity>
-		where TAggregate : IAggregate<TIdentity>
+		where TAggregate : class, IAggregate<TIdentity>
 		where TIdentity : struct
 	{
 		IEnumerable<TAggregate> All { get; }
